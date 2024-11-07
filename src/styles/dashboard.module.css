@@ -1,0 +1,72 @@
+/* Main container for dashboard */
+.dashboardContainer {
+  display: flex;
+}
+
+/* Default style for main content when sidebar is visible */
+.mainContent {
+  flex: 1;
+  margin-left: 250px; /* Space for sidebar */
+  padding-left: 40px;
+  transition: margin-left 0.5s ease;
+}
+
+/* Expanded style for main content when sidebar is hidden */
+.expanded {
+  margin-left: 0; /* No margin when sidebar is hidden */
+  padding-left: 40px;
+}
+
+/* Grid layout for cards within the main content area */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title styling for each card */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* General text styling within cards */
+.card p, .card ul {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Increase/Decrease indicators for percentages */
+.increase {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.decrease {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Styling for lists inside cards, e.g., "Users by Device" and "Referral Sources" */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 14px;
+  margin: 5px 0;
+}

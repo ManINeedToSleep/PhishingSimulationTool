@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  /* width: calc(100% - 250px); Adjusted width for sidebar */
+  /* margin-left: 250px; */
+  transition: width 0.5s ease, margin-left 0.5s ease;
+}
+
+.header.stretched {
+  width: 100%;
+  margin-left: 0;
+}
+
+.profileImage {
+  width: 10px;             /* Set the width */
+  height: 10px;            /* Set the height */
+  border-radius: 50%;      /* Make it circular */
+  object-fit: cover;       /* Ensure the image covers the area without distortion */
+  border: 2px solid #fff;  /* Optional: white border around the profile image */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow for depth */
+}
