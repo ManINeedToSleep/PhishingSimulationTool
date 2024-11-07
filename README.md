@@ -1,7 +1,3 @@
-Here’s an updated README with a **Note** section added to inform users that the dashboard currently displays dummy data for demonstration purposes. 
-
----
-
 # PhishGuard - Phishing Simulation Tool
 
 This project, **PhishGuard**, is a web-based phishing simulation tool designed to help users practice identifying phishing attempts through realistic, interactive scenarios. Users encounter various phishing techniques via emails, messages, and links, making decisions to enhance their ability to spot potential threats. This tool is especially beneficial for new cybersecurity analysts looking to build practical phishing detection skills.
