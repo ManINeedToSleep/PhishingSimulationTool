@@ -1,4 +1,6 @@
-/* Sidebar Base Style */
+/* sidebar.module.css */
+
+/* Sidebar container */
 .sidebar {
   height: 100vh;
   width: 250px;
@@ -8,81 +10,88 @@
   left: 0;
   overflow-x: hidden;
   padding-left: 15px;
+  padding-top: 10px;
   transition: transform 0.5s ease, width 0.5s ease;
   box-shadow: 3px 0 10px rgba(92, 92, 92, 0.5);
   filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.5));
 }
 
-/* Hide sidebar */
 .hidden {
-  transform: translateX(-230px);
+  transform: translateX(-90%);
 }
 
-/* Toggle button */
+/* Logo section with toggle button */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .toggleButton {
-  position: fixed;
-  top: 27px;
-  left: 235px; /* Normal position when sidebar is visible */
   background: none;
   border: none;
+  color: #ffffff;
   cursor: pointer;
-  padding: 0;
-  z-index: 2;
-  transition: left 0.5s ease;
+  font-size: 1.2rem;
+  padding: 5px;
 }
 
-/* Poke out when sidebar is hidden */
-.pokedOut {
-  left: 0; /* Move to the edge of the screen */
-  transform: translateX(-50%); /* Center it on the screen edge */
-}
-
-/* Toggle icon */
-.toggleIcon {
-  width: 24px;
-  height: 24px;
-}
-
-.nav a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin: 10px 0px;
-  font-size: 16px;
-}
-
-/* Side panel text styling */
-.sidebar h2, .sidebar p {
-  color: white;
-  padding: 10px 20px;
-}
-
-/* Add hover effect for menu items */
-.nav a:hover {
-  background-color: #313131;
-  cursor: pointer;
-}
-
-/* Profile Section */
-.profileSection {
+/* Navigation section */
+.nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  padding-top: 360px;
-  border-top: 1px solid #333;
-  color: white;
+  gap: 15px;
 }
 
-.profileImage {
+.navLink {
+  color: #adb5bd;
+  padding: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #3c4049;
+  color: #ffffff;
+}
+
+.navLink.active {
+  background-color: #4c5161;
+  color: #ffffff;
+}
+
+/* Icon styling within navigation links */
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* User profile section */
+.userProfile {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #3c4049;
+  display: flex;
+  align-items: center;
+}
+
+.profileImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
-.username {
-  font-size: 14px;
-  text-align: center;
+/* Text styling for username */
+.userProfile p {
+  font-size: 1rem;
+  color: #ffffff;
 }

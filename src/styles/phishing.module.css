@@ -1,0 +1,117 @@
+/* Main phishing container with sidebar layout */
+.phishingContainer {
+    display: flex;
+  }
+  
+  .mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+  }
+  
+  /* Adjust main content margin based on sidebar visibility */
+  .expanded {
+    margin-left: 0;
+  }
+  
+  /* Centering the email and buttons */
+  .centeredContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px; /* Limit width for better readability */
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  /* Scenario Counter */
+  .scenarioCounter {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Scenario Card (Email) Styling */
+  .scenarioCard {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Response Buttons */
+  .buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  
+  .phishingButton, .notPhishingButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    width: 150px;
+  }
+  
+  .phishingButton {
+    background-color: #dc3545;
+  }
+  
+  .notPhishingButton {
+    background-color: #28a745;
+  }
+  
+  /* Feedback Section */
+  .feedback {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .feedback p {
+    margin-bottom: 10px;
+  }
+  
+  .nextButton {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* styles/phishing.module.css */
+
+/* Feedback Section */
+.feedback {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Explanation Text */
+  .explanation {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
