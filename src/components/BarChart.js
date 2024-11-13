@@ -2,10 +2,16 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-const BarChart = ({ data }) => {
+const BarChart = ({ data = [] }) => {
   const chartRef = useRef();
 
   useEffect(() => {
+    // Ensure data is an array before proceeding
+    if (!Array.isArray(data) || data.length === 0) return;
+
+    // Clear any previous SVG elements
+    d3.select(chartRef.current).selectAll('*').remove();
+
     // Get the width of the card to dynamically size the chart
     const width = chartRef.current.clientWidth;
     const height = 200; // Fixed height for better visualization
@@ -15,14 +21,14 @@ const BarChart = ({ data }) => {
       .attr('height', height)
       .style('overflow', 'visible');
 
-    // Set up scales based on dynamic width and fixed height
+    // Set up scales
     const x = d3.scaleBand()
       .domain(data.map(d => d.device))
       .range([0, width])
       .padding(0.3);
 
     const y = d3.scaleLinear()
-      .domain([0, 100])
+      .domain([0, d3.max(data, d => d.percentage)])
       .range([height, 0]);
 
     svg.selectAll('.bar')

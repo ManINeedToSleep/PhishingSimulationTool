@@ -1,26 +1,28 @@
+/* styles/dashboard.module.css */
+
 /* Main container for dashboard */
 .dashboardContainer {
   display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f8; /* Light gray background for a clean look */
 }
 
 /* Default style for main content when sidebar is visible */
 .mainContent {
   flex: 1;
   margin-left: 250px; /* Space for sidebar */
-  padding-left: 40px;
+  padding: 20px 40px;
   transition: margin-left 0.5s ease;
 }
 
-/* Expanded style for main content when sidebar is hidden */
 .expanded {
-  margin-left: 0; /* No margin when sidebar is hidden */
-  padding-left: 40px;
+  margin-left: 0;
 }
 
-/* Grid layout for cards within the main content area */
+/* Grid container for cards */
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
   gap: 20px;
   margin-top: 20px;
 }
@@ -28,45 +30,49 @@
 /* Card styling */
 .card {
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Title styling for each card */
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover for interactivity */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
 .card h3 {
-  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
   margin-bottom: 10px;
 }
 
-/* General text styling within cards */
-.card p, .card ul {
-  font-size: 14px;
-  color: #333;
+.card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
 }
 
-/* Increase/Decrease indicators for percentages */
+/* Text styling for smaller notes or labels */
+.card small {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Feedback text styling for trend indicators (increase or decrease) */
 .increase {
-  color: #28a745;
-  font-weight: bold;
+  color: #28a745; /* Green for positive */
+  font-weight: 500;
 }
 
 .decrease {
-  color: #dc3545;
-  font-weight: bold;
+  color: #dc3545; /* Red for negative */
+  font-weight: 500;
 }
 
-/* Styling for lists inside cards, e.g., "Users by Device" and "Referral Sources" */
-.card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.card ul li {
-  font-size: 14px;
-  margin: 5px 0;
+/* Styling for charts (embedded in cards) */
+.chartContainer {
+  margin-top: 15px;
+  overflow-x: auto;
 }
