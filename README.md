@@ -16,22 +16,25 @@ This project, **PhishGuard**, is a web-based phishing simulation tool designed t
 ### Current Features
 
 1. **Realistic Phishing Scenarios**
-   - A variety of phishing examples, including emails, messages, and links.
    - Users engage with each scenario to classify it as phishing or legitimate.
-   - Scenarios are randomized to provide a unique experience each time.
-
+   - **Gmail-Style Email Component**: Realistic email templates styled to mimic Gmail's design, including sender details, email bodies, and actionable links.
+     
 2. **Feedback System**
    - Immediate feedback is provided based on user responses (e.g., "Phishing" or "Not Phishing").
-   - Each feedback response includes explanations, helping users learn from their decisions.
+   - Each feedback response includes detailed explanations, formatted with HTML for clarity, helping users learn from their decisions.
 
-3. **Progress Tracking**
-   - Tracks user attempts, success rates, and progress over time.
-   - Progress data is stored in `localStorage`, allowing users to retain their progress across sessions.
-
-4. **Dynamic Dashboard with D3.js Visualizations**
-   - Displays real-time analytics and statistics on user progress.
-   - Includes charts for various metrics (e.g., phishing reports, device engagement) created with D3.js for visual insights.
+3. **Dynamic Dashboard with D3.js Visualizations**
+   - Includes charts for various metrics (e.g., phishing detection success rate, user engagement by device) created with D3.js for visual insights.
+   - **Newly Added Metrics**:
+     - **Phishing Detection Success Rate**
+     - **Top Missed Scenarios**
+     - **User Improvement Over Time**
+     - **Completion Rates**
    - Data is sourced from a local mock database (`DashboardData.js`) for realistic test data.
+
+4. **Modern Sidebar Design**
+   - Sidebar redesigned with popular CSS patterns, including icons for each navigation link (using `react-icons`) and responsive styling.
+   - Includes new sections: **Analytics**, **Reports**, and **Training**.
 
 ---
 
@@ -41,9 +44,9 @@ This project, **PhishGuard**, is a web-based phishing simulation tool designed t
    - **In Progress**: Admin panel to enable administrators to add and edit phishing scenarios.
    - **Functionality**: Admins can enter scenario details through a form, dynamically updating the available phishing scenarios.
 
-2. **Enhanced Scenario Randomization**
-   - Planned improvements to existing randomization for richer scenario variations.
-   - Additional scenario templates and phishing tactics to increase engagement.
+2. **Expanded Phishing Tactics**
+   - Integration of more phishing methods, such as fake social media links, fake login pages, and QR code scams.
+   - Enhanced email components to allow for more dynamic phishing templates (e.g., logos, custom links).
 
 3. **Advanced User Tracking and Reporting**
    - Expanded tracking for more detailed performance metrics (e.g., identifying specific weak spots).
@@ -86,6 +89,27 @@ To set up the project locally:
 
 ---
 
+## Recent Updates
+
+1. **Gmail-Style Email Scenarios**
+   - Realistic emails styled to mimic Gmail, complete with actionable links, sender names, and timestamps.
+   - Includes 10 scenarios (5 phishing, 5 legitimate) for realistic testing.
+
+2. **Sidebar Redesign**
+   - Added icons for navigation and new sections: **Analytics**, **Reports**, and **Training**.
+   - Improved responsiveness with a toggle button to hide/show the sidebar.
+
+3. **New Dashboard Metrics**
+   - Phishing Detection Success Rate
+   - Top Missed Scenarios
+   - User Improvement Over Time
+   - Completion Rates of Phishing Scenarios
+
+4. **Charts with D3.js**
+   - Integrated D3.js for bar and line charts to visualize metrics dynamically.
+
+---
+
 ## Future Goals
 
 - **Multi-User Support**: Expand the tool to support teams, allowing multiple users to log in and track individual progress.
@@ -97,3 +121,7 @@ To set up the project locally:
 ## Contributions
 
 This project is developed by a novice JavaScript programmer with plans for continued improvement and expansion. Contributions, ideas, and feedback are welcome to enhance the tool's capabilities.
+
+---
+
+### Let me know if you need further changes or refinements!
